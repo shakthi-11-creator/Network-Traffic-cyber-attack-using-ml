@@ -1,0 +1,644 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="antialiased ml-24">
+  <div class="font-light text-3xl align-middle mb-8">Symptoms for  hemorrhagic stroke</div>      
+    <ul class="list-outside list-disc">
+      <li>Sudden, severe headache near the back of the head. Many people have described this as the “worst headache of your life.”</li>
+      <li>Losing consciousness</li>
+      <li>Inability to move or feel</li>
+      <li>Confusion and irritability</li>
+      <li>Muscle pain in neck and shoulders</li>
+      <li>Sensitivity to light</li>
+      <li>Seizure</li>
+      <li>Vision problems </li>
+      <li>One eye pupil larger than the other</li>
+      <li>Nausea and vomiting</li>    
+    </ul>
+  
+</div>
+<div class="container mx-auto px-4 sm:px-8">
+    <div class="py-8">
+      <div>
+        <h2 class="text-2xl font-semibold leading-tight">Care plan for hemorrhagic stroke</h2>
+      </div>
+      <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+        <div
+          class="inline-block min-w-full shadow-md rounded-lg overflow-hidden"
+        >
+          <table class="min-w-full leading-normal">
+            <thead>
+              <tr>
+                <th
+                  class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                >
+                  Treatment
+                </th>
+                <th
+                  class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                >
+                  Proceedure
+                </th>
+                
+                
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <div class="flex">
+                    <div class="flex-shrink-0 w-10 h-10">
+                      <img
+                        class="w-full h-full rounded-full"
+                        src="{% static 'images/medication.jpg' %}"
+                        alt=""
+                      />
+                    </div>
+                    <div class="ml-3">
+                      <h1 class="text-gray-900 whitespace-no-wrap">
+                        Medications
+                      </h1>
+                      
+                    </div>
+                  </div>
+                </td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  
+                  <div class="font-light text-3xl align-middle mb-2"></div>      
+                    <ul class="list-outside list-disc">
+                        <li>Blood pressure medication with nicardipine drip to lower blood pressure to 140/90 mmHg or lower</li>
+                        <li>Anti-seizure medication with levetiracetam (500mg twice daily) to prevent seizures.</li>
+                        <li>Tranexamic acid (1g IV every 6 hours for 24 hours) to control bleeding.</li>
+                        <li>Vitamin K antagonist (warfarin) should be stopped if present, if not then no anticoagulation should be given.</li>
+                        <li>Antiemetic  medication with ondansetron (4mg three times daily) to prevent nausea and vomiting.</li>
+                        
+                      
+                    </ul>
+                
+                </div>
+                </td>
+                
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <span
+                    class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                  >
+                    <span
+                      aria-hidden
+                      class="absolute inset-0 bg-red-700 opacity-50 rounded-full"
+                    ></span>
+                    <span class="relative">Important</span>
+                  </span>
+                </td>
+                
+              </tr>
+              <tr>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <div class="flex">
+                    <div class="flex-shrink-0 w-10 h-10">
+                      <img
+                        class="w-full h-full rounded-full"
+                        src="{% static 'images/rehibilation.jpg' %}"
+                        alt=""
+                      />
+                    </div>
+                    <div class="ml-3">
+                      <p class="text-gray-900 whitespace-no-wrap">
+                        Rehibilation
+                      </p>
+                      
+                    </div>
+                  </div>
+                </td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <div class="font-light text-3xl align-middle mb-2"></div>      
+                    <ul class="list-outside list-disc">
+                        <li>Physical therapy 3 times per week for 12 weeks to improve mobility and strength .</li>
+                        <li>Occupational therapy 2 times per week for 12 weeks to relearn daily living skills </li>
+                        <li>Speech therapy 2 times per week for 12 weeks to improve communication skills.</li>
+                        
+                      
+                    </ul>
+                
+                </div>
+               
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <span
+                    class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                  >
+                    <span
+                      aria-hidden
+                      class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                    ></span>
+                    <span class="relative">must</span>
+                  </span>
+                </td>
+                
+              </tr>
+              <tr>
+                <tr>
+                  <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <div class="flex">
+                      <div class="flex-shrink-0 w-10 h-10">
+                        <img
+                          class="w-full h-full rounded-full"
+                          src="{% static 'images/diagonosis.jpg' %}"
+                          alt=""
+                        />
+                      </div>
+                      <div class="ml-3">
+                        <p class="text-gray-900 whitespace-no-wrap">
+                          Diagnosis
+                        </p>
+                        
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <div class="font-light text-3xl align-middle mb-2"></div>      
+                      <ul class="list-outside list-disc">
+                          <li>CT scan or MRI to confirm the diagnosis and identify the location and extent of the hemorrhagic stroke.</li>  
+                      </ul>
+                  
+                  </div>
+                 
+                  <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                    <span
+                      class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                    >
+                      <span
+                        aria-hidden
+                        class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                      ></span>
+                      <span class="relative">must</span>
+                    </span>
+                  </td>
+                  
+                </tr>
+                <tr>
+                  <tr>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <div class="flex">
+                        <div class="flex-shrink-0 w-10 h-10">
+                          <img
+                            class="w-full h-full rounded-full"
+                            src="{% static 'images/surgical.jpg' %}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="ml-3">
+                          <p class="text-gray-900 whitespace-no-wrap">
+                            Surgical procedures
+                          </p>
+                          
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <div class="font-light text-3xl align-middle mb-2"></div>      
+                        <ul class="list-outside list-disc">
+                            <li>Surgical evacuation or endovascular coiling if there is an aneurysm that caused the hemorrhage.</li>
+                            <li>Craniotomy with clot evacuation if there is a large hematoma causing pressure on the brain.</li>
+                            
+                                    
+                        </ul>
+                    
+                    </div>
+                   
+                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                      <span
+                        class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight"
+                      >
+                        <span
+                          aria-hidden
+                          class="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                        ></span>
+                        <span class="relative">Healthy lifestyle</span>
+                      </span>
+                    </td>
+                    
+                  </tr>
+                  <tr>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <div class="flex">
+                    <div class="flex-shrink-0 w-10 h-10">
+                      <img
+                        class="w-full h-full rounded-full"
+                        src="{% static 'images/lifestyle.jpg' %}"
+                        alt=""
+                      />
+                    </div>
+                    <div class="ml-3">
+                      <p class="text-gray-900 whitespace-no-wrap">
+                        Lifestyle Modifications
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <div class="font-light text-3xl align-middle mb-2"></div>      
+                    <ul class="list-outside list-disc">
+                        <li>Smoking cessation program to help quit smoking.</li>
+                        <li>Encourage regular physical activity, such as walking 30 minutes a day.</li>
+                        <li>Encourage healthy eating habits with a focus on whole grains, fruits, and vegetables .</li>
+                        <li>A healthy diet with low salt, low fat, and low sugar.</li>                 
+                    </ul>
+                
+                </div>
+                </td>
+                
+                <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                  <span
+                    class="relative inline-block px-3 py-1 font-semibold text-orange-900 leading-tight"
+                  >
+                    <span
+                      aria-hidden
+                      class="absolute inset-0 bg-orange-200 opacity-50 rounded-full"
+                    ></span>
+                    <span class="relative">Good</span>
+                  </span>
+                </td>
+                
+              </tr>
+              <tr>
+                <td class="px-5 py-5 bg-white text-sm">
+                  <div class="flex">
+                    <div class="flex-shrink-0 w-10 h-10">
+                      <img
+                        class="w-full h-full rounded-full"
+                        src="{% static 'images/plan.jpg' %}"
+                        alt=""
+                      />
+                    </div>
+                    <div class="ml-3">
+                      <p class="text-gray-900 whitespace-no-wrap">
+                        Follow-up Plan
+                      </p>
+                      
+                    </div>
+                  </div>
+                </td>
+                <td class="px-5 py-5 bg-white text-sm">
+                 
+                  <div class="font-light text-3xl align-middle mb-2"></div>      
+                    <ul class="list-outside list-disc">
+                        <li>Patients will need to have regular follow-up appointments with their healthcare provider to monitor their recovery and adjust their treatment plan as necessary</li>
+                        <li>Follow-up MRI in 6 months to assess treatment effectiveness and progression of the stroke</li>
+                        <li>Encourage healthy eating habits with a focus on whole grains, fruits, and vegetables .</li>
+                        <li>Referral to neurologist for further evaluation and management as needed.</li>                 
+                    </ul>
+                
+                </div>
+                </td>
+                
+                <td class="px-5 py-5 bg-white text-sm">
+                  <span
+                    class="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight"
+                  >
+                    <span
+                      aria-hidden
+                      class="absolute inset-0 bg-red-200 opacity-50 rounded-full"
+                    ></span>
+                    <span class="relative">Great thing</span>
+                  </span>
+                </td>
+                
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div></div>
+  <div>
+    <h2 class="text-2xl font-semibold leading-tight"> The care plan for hemorrhagic stroke should be individualized to each patient's specific needs and risk factors to ensure the best possible outcome. </h2>
+  </div>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+  
+  :root {
+    --bg-color: rgb(225, 229,242);
+    --color1: rgb(191, 219, 247);
+    --color2: rgb(31, 122, 140);
+    --color3: rgb(2, 43, 58);
+    --white: rgb(255, 255, 255);
+    --persian-orange: rgb(198, 136, 102);
+  }
+  
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font: 16px / 24px 'Lora', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--color3);
+    margin: 50px 0;
+  }
+  
+  .container {
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cards {
+    display: flex;
+    padding: 25px 0;
+    list-style: none;
+    text-align: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 100%;
+    padding: 20px;
+    background: var(--bg-color);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.2),
+      -6px -6px 12px 0 rgba(255, 255, 255, 0.5);
+    scroll-snap-align: start;
+    transition: all 0.2s;
+  }
+  
+  .card:not(last-child) {
+    margin-right: 10px;
+  }
+  
+  .card:hover {
+    scale: 1.05;
+  }
+  .card .card-title {
+    font-size: 1.5rem;
+  }
+  
+  .card .round {
+    border: 2px solid var(--persian-orange);
+    border-radius: 50%;
+    padding: .35rem;
+  }
+  .card .card-content {
+    margin: 20px 0;
+    max-width: 85%;
+  }
+  .card-content p {
+    font-size: 0.88rem
+  }
+  button.primary {
+    background-color: var(--color3);
+    border: 1px solid var(--color3);
+    border-radius: 3px;
+    color: var(--white);
+    font-family: inherit;
+    font-weight: 500;
+    padding: 10px 25px;
+    margin-top: 1rem;
+  }
+  
+  button.primary:hover {
+    background: var(--color2);
+  }
+  
+  button.primary.ghost {
+    background-color: transparent;
+    color: var(--color3);
+  }
+  
+  button.ghost:hover {
+    background: var(--color2);
+    color: var(--white);
+  }
+  /* Media Query */
+  
+  @media (min-width: 500px) {
+    .card {
+      flex-basis: calc(50% - 10px);
+    }
+  
+    .card:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  
+  @media (min-width: 700px) {
+    .card {
+      flex-basis: calc(calc(100% / 3) - 20px);
+    }
+  
+    .card:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  @media (min-width: 1100px) {
+    .card {
+      flex-basis: calc(25% - 30px);
+    }
+  
+    .card:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+  
+  </style>
+  <body>
+    <div class="container">
+      <center><h2>Near By Doctor Details</h2></center>
+      <ul class="cards">
+        <li class="card">
+          <div>
+            <img class="round" src="/static/images/doc1.jfif" alt="user" />
+            <h3 class="card-title">DR. Kodeeshwaran Marappan</h3>
+            <div class="card-content">
+              <p>MCh, MBBS, MRCS (UK)
+                Neurosurgeon - Specializes in Treatment of Stroke
+                <p>Boston Brain & Spine Care</p>
+                <p>Register Number: <span>50834</span></p>
+                <p>Anna Nagar</p>
+                <p>Chennai</p>        
+            </div>
+          </div>
+          <div class="buttons">
+        <button class="primary">
+          Message
+        </button>
+        <button class="primary ghost">
+          Call
+        </button>
+      </div>
+        </li>
+         <li class="card">
+          <div><img class="round" src="/static/images/doc2.jfif" alt="user" />
+            <h3 class="card-title">Dr.Lakshmi Narasimhan</h3>
+            <div class="card-content">
+              <p>DM - Neurology, MD - General Medicine, MBBS</p>
+              <p>Neurologist - Specializes in Treatment of Stroke</p>
+              <p>Register Number: <span>50834</span></p>
+              <p>Diya Speciality Clinic</p>
+              <p>Velachery</p>
+              <p>Chennai</p>
+            </div>
+          </div>
+          <div class="buttons">
+        <button class="primary">
+          Message
+        </button>
+        <button class="primary ghost">
+          Call
+        </button>
+      </div>
+        </li>
+         <li class="card">
+          <div>
+            <img class="round" src="/static/images/doc3.jfif" alt="user" />
+            <h3 class="card-title">Dr.Mahesh Narayanan</h3>
+            <div class="card-content">
+              <p>MCh, MBBS, MRCS (UK)
+                Neurosurgeon - Specializes in Treatment of Stroke</p>
+              <p>Apollo Children Hospitals Greams Road,Chennai</p>
+              <p>Register Number: <span>50834</span></p>
+            </div>
+          </div>
+          <div class="buttons">
+        <button class="primary">
+          Message
+        </button>
+        <button class="primary ghost">
+          Call
+        </button>
+      </div>
+        </li>
+         <li class="card">
+          <div>
+            <img class="round" src="/static/images/doctor3.jfif" alt="user" />
+            <h3 class="card-title">Dr. Geetha Lakshmipathy</h3>
+            <div class="card-content">
+              <p>MBBS, MD(Peadiatrics), DM(Neurologist)</p>
+              <p>Apollo Hospitals Greams Road,Chennai</p>
+              <p>Register Number: <span>23162</span></p>
+  
+            </div>
+          </div>
+          <div class="buttons">
+        <button class="primary">
+          Message
+        </button>
+        <button class="primary ghost">
+          Call
+        </button>
+      </div>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      
+      <ul class="cards">
+        <li class="card">
+          <div>
+            <img class="round" src="/static/images/doc4.jfif" alt="user" />
+            <h3 class="card-title">Dr. Prabash P R</h3>
+            <div class="card-content">
+              <p>MBBS, MD, DM</p>  
+              <p>Apollo Speciality Hospitals Vanagaram,Tiruvallur</p>   
+              <p>Register Number: <span>76123</span></p>     
+            </div>
+          </div>
+          <div class="buttons">
+        <button class="primary">
+          Message
+        </button>
+        <button class="primary ghost">
+          Call
+        </button>
+      </div>
+        </li>
+        
+         <li class="card">
+          <div><img class="round" src="/static/images/doctor5.jfif" alt="user" />
+            <h3 class="card-title">Dr. Yogaraj S</h3>
+            <div class="card-content">
+              <p>MBBS, MD (Int. Med.), DM (Neuro.)</p>
+              <p>Register Number: <span>40965</span></p>
+            </div>
+          </div>
+          <div class="buttons">
+        <button class="primary">
+          Message
+        </button>
+        <button class="primary ghost">
+          Call
+        </button>
+      </div>
+        </li>
+         <li class="card">
+          <div>
+            <img class="round" src="/static/images/doctor4.jfif" alt="user" />
+            <h3 class="card-title">Dr. R M Bhoopathy</h3>
+            <div class="card-content">
+              <p>MBBS, MD, DM</p>
+              <p>Apollo Hospitals Tondiarpet,Chennai</p>
+              <p>Register Number: <span>30599</span></p>
+            </div>
+          </div>
+          <div class="buttons">
+        <button class="primary">
+          Message
+        </button>
+        <button class="primary ghost">
+          Call
+        </button>
+      </div>
+        </li>
+         <li class="card">
+          <div>
+            <img class="round" src="/static/images/doctor1.jfif" alt="user" />
+            <h3 class="card-title">Dr. Panneer A</h3>
+            <div class="card-content">
+              <p>MBBS, MD, DM (Neurology)</p>
+              <p>Apollo Hospitals Heart Centre Thousand Lights,Chennai</p>
+              <p>Register Number: <span>16523</span></p>
+            </div>
+          </div>
+          <div class="buttons">
+        <button class="primary">
+          Message
+        </button>
+        <button class="primary ghost">
+          Call
+        </button>
+      </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+  </html>
+
+{% endblock content %}
+
+

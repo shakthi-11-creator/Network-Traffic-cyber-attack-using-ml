@@ -1,0 +1,122 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-200">
+    <header class="text-gray-700 body-font border-b border-gray-200">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="#" target="_blank">
+            
+            <img src="{% static 'images/web.svg' %}" class="w-20 h-20 text-white p-2 bg-indigo-500 rounded-full" alt="">
+            <span class="ml-3 text-xl">Cyber Security</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a href="{% url 'home' %}" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="{% url 'about' %}" class="mr-5 hover:text-gray-900">Problem statement</a>
+            <a href="{% url 'Model' %}" class="mr-5 hover:text-gray-900">Cyber Attack Model</a>
+            
+            
+          </nav>
+          {% if user.is_authenticated %}
+          <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0"><a href="{% url 'logout' %}">Logout</a> 
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+          {% endif %}
+        </div>
+      </header>
+      <section class="text-gray-700 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Cyber attack 
+              <br class="hidden lg:inline-block">Prediction
+            </h1>
+            <p class="mb-8 leading-relaxed">   
+            
+
+"In the digital age, cyber threats loom like shadows in the virtual realm, driven by a potent trifecta of motives: greed, curiosity, and malice. Hackers, be they profit-driven cybercriminals, inquisitive hackers seeking knowledge, or malicious actors bent on chaos, exploit vulnerabilities in our interconnected world. Understanding these diverse motives is essential in fortifying our defenses against the ever-evolving landscape of cyber dangers.".
+              
+            
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img class="object-cover object-center rounded" alt="hero" src="https://img.freepik.com/free-vector/cyber-security-concept_23-2148532223.jpg?w=2000">
+          </div>
+        </div>
+      </section>
+     
+      <section class="text-gray-700 body-font border-t border-gray-200">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+          <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+            <img alt="feature" class="object-cover object-center h-full w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhKJ9KmMNqwA7GPbSh3cQmDfxuf8jbY8b5ezMKoy7H7Ulla7YutMVIQDn2y6gXZFXypB4&usqp=CAU">
+          </div>
+          <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left text-center">
+            <div class="flex flex-col mb-10 lg:items-start items-center">
+              <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Why</h2>
+                <p class="leading-relaxed text-base">A Cybersecurity is essential to protect sensitive data, critical infrastructure, and personal privacy in an increasingly digital world. It helps prevent financial losses, reputational damage, and potential harm to individuals.</p>
+                <a href="https://www.iea.org/energy-system/renewables/solar-pv" class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="flex flex-col mb-10 lg:items-start items-center">
+              <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                  <circle cx="6" cy="6" r="3"></circle>
+                  <circle cx="6" cy="18" r="3"></circle>
+                  <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                </svg>
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">How</h2>
+                <p class="leading-relaxed text-base"> Cybersecurity is implemented through a combination of technologies, processes, and best practices. This includes firewalls, encryption, intrusion detection systems, security policies, employee training, and ongoing monitoring.</p>
+                <a href="https://www.vantagemarketresearch.com/industry-report/solar-power-market-1989#:~:text=The%20Global%20Solar%20Power%20Market,6.40%25%20over%20the%20forecast%20period." class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">When</h2>
+                <p class="leading-relaxed text-base"> Cybersecurity is a continuous effort because cyber threats evolve constantly. It's crucial to be proactive in identifying vulnerabilities and responding to incidents promptly.</p>
+                <a href="https://www.vantagemarketresearch.com/industry-report/solar-power-market-1989#:~:text=The%20Global%20Solar%20Power%20Market,6.40%25%20over%20the%20forecast%20period." class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+              <div class="flex-grow">
+                <h2 class="text-gray-900 text-lg title-font font-medium mb-3">What</h2>
+                <p class="leading-relaxed text-base"> The cybersecurity domain encompasses a wide range of activities, from threat analysis and risk assessment to incident response and recovery. It also involves securing networks, devices, software, and cloud-based services.</p>
+                <a href="https://www.vantagemarketresearch.com/industry-report/solar-power-market-1989#:~:text=The%20Global%20Solar%20Power%20Market,6.40%25%20over%20the%20forecast%20period." class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      
+      
+    
+      
+    {% block content %} {% endblock %}
+</body>
+</html>

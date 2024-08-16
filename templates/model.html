@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="bg-gray-100 mx-auto max-w-6xl bg-white py-20 px-12 lg:px-24 shadow-xl mb-24">
+      <form method="post">
+        {% csrf_token %}
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+          <div class="-mx-3 md:flex mb-6">
+            <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="company">Age</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="company" name="age" type="number" placeholder="Please enter your age">
+
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="company">Cholestrol</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" name="Cholesterol" id="company" type="number" placeholder="Please enter your Cholesterol ">
+
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="company">Glucose level</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" name="Glucose level	" id="company" type="number" placeholder="Please enter your Glucose level">
+              
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="company">HDL</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="company" name="HDL" type="number" placeholder="Please enter HDL value">             
+            </div>
+            
+            <div class="md:w-1/2 px-3">
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="title">LDL</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="title" type="number" name="LDL" placeholder="Please enter LDL value">
+
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="title">systolic</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="title" name="systolic" type="number" placeholder="Please enter systolic value">
+
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="title">diastolic</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="title" name="diastolic" type="number" placeholder="Please enter dialostic value">
+
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="title">BMI</label>
+              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" step="0.0001" id="title" name="bmi" type="number" placeholder="Please enter bmi value">
+            </div>
+            
+          </div>
+          
+          <div class="-mx-3 md:flex mb-2">
+            <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="location">Gender</label>
+              <div>
+                <select name="gender" class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="location">
+                  <option value=1>Male</option>
+                  <option value=0>Female</option>
+                </select>
+              </div>
+            </div>
+            <div class="md:w-1/2 px-3">
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="job-type">Smoking Status</label>
+              <div>
+                <select name="smoking_status" class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="job-type">
+                  <option value=0>Formerly smoked</option>
+                  <option value=1>Never smoked</option>
+                  <option value=2>Smokes</option>
+                  <option value=3 >Unknown</option>                  
+                </select>
+              </div>
+            </div>
+            <div class="md:w-1/2 px-3">
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="department">Alcohol Status</label>
+              <div> 
+                <select name="alcohol _status " class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="department">
+                  <option value=1>Formerly Drinks</option>
+                  <option value=2>Never Drinks</option>
+                  <option value=0>Drinks</option>
+                  <option value=3>Unknown</option>
+                </select>
+              </div>
+            </div>
+            <div class="md:w-1/2 px-3">
+              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="department">Stroke</label>
+              <div>
+                <select name="stroke" class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="department">
+                  <option value=1>Yes</option>
+                  <option value=0>No</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2 px-3">
+            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="department">Heart disease</label>
+            <div>
+              <select name="disease" class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="department">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+              </select>
+            </div>            
+          </div>
+          <div class="md:w-1/2 px-3">
+            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="department">Hyper Tension</label>
+            <div>
+              <select name="Hyper tension" class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="department">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+              </select>
+            </div>                 
+          </div>
+
+
+          <div class="md:w-1/2 px-3">
+            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="department">Family History</label>
+            <div>
+              <select name="Family history" class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="department">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+              </select>
+            </div>            
+          </div>
+          <div class="md:w-1/2 px-3">
+            <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="department">Diabets</label>
+            <div>
+              <select name="diabetes" class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="department">
+                <option value=1>Yes</option>
+                <option value=0>No</option>
+              </select>
+            </div>            
+          </div>
+          <div class="-mx-3 md:flex mt-2">
+            <div class="md:w-full px-3">
+              <button class="md:w-full bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full">
+                Button
+              </button>
+            </div>
+          </div>
+          
+        </div>
+      </form>
+    </div>
+    
+  </body>
+{% endblock content %}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #23242a;
+      }
+      .box {
+        position: relative;
+        width: 380px;
+        height: 420px;
+        background: #1c1c1c;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .box::before, .box::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 380px;
+        height: 420px;
+        z-index: 1;
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+        background: linear-gradient(0deg, transparent, blue, blue, blue);
+      }
+      .box::after {
+        animation-delay: -3s;
+      }
+      .box__borderline {
+        position: absolute;
+        top: 0;
+        inset: 0;
+      }
+      .box__borderline::before, .box__borderline::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 380px;
+        height: 420px;
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+        z-index: 1;
+        background: linear-gradient(0deg, transparent, red, red, red);
+      }
+      .box__borderline::before {
+        animation-delay: -1.5s;
+      }
+      .box__borderline::after {
+        animation-delay: -4.5s;
+      }
+      @keyframes animate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .form {
+        position: absolute;
+        inset: 4px;
+        background: #222;
+        padding: 50px 40px;
+        border-radius: 8px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+      }
+      .form__title {
+        color: #fff;
+        text-align: center;
+      }
+      .form__box {
+        position: relative;
+        width: 100%;
+        margin-top: 35px;
+      }
+      .form__input {
+        position: relative;
+        width: 100%;
+        padding: 20px 10px 10px;
+        background: transparent;
+        outline: none;
+        border: none;
+        box-shadow: none;
+        color: #23242a;
+        transition: 0.3s;
+        z-index: 10;
+      }
+      .form__input:valid ~ .form__span, .form__input:focus ~ .form__span {
+        color: #fff;
+        font-size: 0.75em;
+        transform: translateY(-34px);
+      }
+      .form__input:valid ~ .form__line, .form__input:focus ~ .form__line {
+        height: 44px;
+      }
+      .form__span {
+        position: absolute;
+        left: 0;
+        padding: 20px 0 10px;
+        pointer-events: none;
+        color: #8f8f8f;
+        font-size: 1em;
+        transition: 0.3s;
+      }
+      .form__line {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        border-radius: 4px;
+        overflow: hidden;
+        transition: 0.3s;
+        pointer-events: none;
+      }
+      .form__links {
+        display: flex;
+        justify-content: space-between;
+      }
+      .form__link {
+        margin: 10px 0;
+        font-size: 0.75em;
+        color: #8f8f8f;
+        text-decoration: none;
+      }
+      .form__link:hover, .form__link:nth-child(2) {
+        color: #fff;
+      }
+      .form__submit {
+        color: #000;
+      }
+      .form__submit[type="submit"] {
+        width: 100%;
+        outline: none;
+        border: none;
+        padding: 9px 25px;
+        background: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 0.9em;
+        margin-top: 10px;
+      }
+      .form__submit[type="submit"]:active {
+        opacity: 0.8;
+      }
+      
+</style>
+<body>
+    <title>Animated Login Form using Html & CSSn</title>
+
+<div class="box">
+	<span class="box__borderline"></span>
+
+	<form class="form" action="#">
+		<h2 class="form__title">Sign in</h2>
+
+		<div class="form__box">
+			<input class="form__input" type="text" required="required">
+			<span class="form__span">Username</span>
+			<i class="form__line"></i>
+		</div>
+
+		<div class="form__box">
+			<input class="form__input" type="password" required="required">
+			<span class="form__span">Password</span>
+			<i class="form__line"></i>
+		</div>
+
+		<div class="form__links">
+			<a class="form__link" href="#">Forgot Password</a>
+			<a class="form__link" href="#">Signup</a>
+		</div>
+		<input class="form__submit" type="submit" value="Login">
+	</form>
+
+</div>
+</body>
+</html>

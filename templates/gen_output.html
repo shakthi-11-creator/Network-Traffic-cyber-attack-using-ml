@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="text-gray-700 body-font border-b border-gray-200">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="#" target="_blank">
+            
+            <img src="{% static 'images/doctor-q.svg' %}" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" alt="">
+            <span class="ml-3 text-xl">Renewable Energy</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+
+            <a href="{% url 'home' %}" class="mr-5 hover:text-gray-900">Home</a>
+            <a href="{% url 'about' %}" class="mr-5 hover:text-gray-900">Problem statement</a>
+            <a href="{% url 'generation_model' %}" class="mr-5 hover:text-gray-900">Generation Model</a>
+            <a href="{% url 'speed_model' %}" class="mr-5 hover:text-gray-900">Speed Model</a>
+            
+          </nav>
+          {% if user.is_authenticated %}
+          <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0"><a href="{% url 'logout' %}">Logout</a> 
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+          {% endif %}
+        </div>
+      </header>
+    
+    <div class="flex items-center justify-center py-8 px-4">
+        <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+        
+                    <div class="w-11/12 lg:w-2/3">
+                        <div class="flex flex-col justify-between h-full">
+                            <div>
+                                <div class="lg:flex w-full justify-between">
+                                    <h3 class="text-gray-600 dark:text-gray-400 leading-5 text-base md:text-xl font-bold">Power Generation in Kw</h3>
+                                    <div class="flex items-center justify-between lg:justify-start mt-2 md:mt-4 lg:mt-0">
+                                        <div class="flex items-center">
+                                            <button class="py-2 px-4 bg-gray-100 dark:bg-gray-700 rounded ease-in duration-150 text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-200">{{ prediction_text }}</button>
+                                            
+                                        </div>
+                                        <div class="lg:ml-14">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-end mt-6">
+                                    <h3 class="text-indigo-500 leading-5 text-lg md:text-2xl">{{prediction_text}}</h3>
+                                    <div class="flex items-center md:ml-4 ml-1 text-green-700">
+                                        <p class="text-green-700 text-xs md:text-base">17%</p>
+                                        <svg role="img" class="text-green-700" aria-label="increase. upward arrow icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                            <path d="M6 2.5V9.5" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M8 4.5L6 2.5" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M4 4.5L6 2.5" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <canvas id="myChart" width="1025" height="400" role="img" aria-label="line graph to show selling overview in terms of months and numbers" ></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+<script>
+    const chart = new Chart(document.getElementById("myChart"), {
+        type: "line",
+        data: {
+          labels: [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "Aug",
+            "Sep",
+            "Nov",
+            "Dec"
+          ],
+          datasets: [
+            {
+              label: "16 Mar 2018",
+              borderColor: "#4A5568",
+              data: [600, 400, 620, 300, 200, 600, 230, 300, 200, 200, 100, 1200],
+              fill: false,
+              pointBackgroundColor: "#4A5568",
+              borderWidth: "3",
+              pointBorderWidth: "4",
+              pointHoverRadius: "6",
+              pointHoverBorderWidth: "8",
+              pointHoverBorderColor: "rgb(74,85,104,0.2)"
+            }
+          ]
+        },
+        options: {
+          legend: {
+            position: false
+          },
+          scales: {
+            yAxes: [
+              {
+                gridLines: {
+                  display: false
+                },
+                display: false
+              }
+            ]
+          }
+        }
+      });
+      
+</script>
+</body>
+</html>
